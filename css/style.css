@@ -1,0 +1,717 @@
+/* ===== YOUR ORIGINAL STYLES (unchanged) ===== */
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+}
+
+body {
+   height: 100%;
+   background: #020231;
+}
+
+.nav-container {
+   display: flex;
+   justify-content: space-between;
+   padding: 20px;
+}
+
+.logo {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.logo img {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   border: orangered 5px solid;
+}
+
+.logo h2 {
+   color: blue;
+}
+
+.nav-container .nav-links a {
+   text-decoration: none;
+   font-size: 25px;
+   color: orange;
+   margin: 35px;
+   position: relative;
+}
+
+.nav-container .nav-links a::after {
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 3px;
+   background: fuchsia;
+   bottom: -5px;
+   left: 0;
+   transition: width 0.3s ease;
+}
+
+.nav-container .nav-links a:hover::after {
+   width: 100%;
+}
+
+.home-top {
+   margin: 30px;
+}
+
+.home-top h1 {
+   color: #38bdf8;
+   font-size: 50px;
+   font-weight: 800;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.home-top h1 strong {
+   color: red;
+   font-family: Arial;
+   text-shadow: 2px 2px 5px blue;
+}
+
+.home-top h3 {
+   color: gold;
+   font-size: 35px;
+}
+
+.home-middle {
+   display: flex;
+   margin: 20px;
+   padding: 15px;
+   justify-content: space-between;
+}
+
+.home-middle img {
+   height: 450px;
+   width: 330px;
+   border-radius: 12px;
+   margin: 28px, 0px;
+}
+
+.home-middle p {
+   color: azure;
+   font-size: 25px;
+   margin-right: 50px;
+}
+
+.home-middle p strong {
+   color: blue;
+   font-weight: 600;
+}
+
+.special {
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+}
+
+.special .btns {
+   align-items: center;
+   display: flex;
+   justify-content: center;
+}
+
+.special .btns a button {
+   margin: 80px;
+   padding: 14px;
+   background: blueviolet;
+   border: none;
+   outline: none;
+   border-radius: 25px;
+   color: white;
+   text-decoration: none;
+   font-size: 18px;
+   font-weight: 600;
+   transition: 0.4s ease;
+}
+
+.special .btns button:hover {
+   background: white;
+   color: red;
+   font-weight: 600;
+}
+
+.special .btns a .wasp {
+   background: green;
+   color: black;
+   transition: 0.4s ease;
+}
+
+.special .btns a button:hover {
+   background: white;
+   color: green;
+}
+
+.abt-cont h1 {
+   text-align: center;
+   color: goldenrod;
+   font-size: 50px;
+   text-decoration: underline;
+}
+
+.abt-main {
+   margin: 20px;
+   padding: 15px;
+}
+
+.another-sp {
+   display: flex;
+   justify-content: space-between;
+}
+
+.abt-main p {
+   color: azure;
+   font-size: 25px;
+   margin-right: 50px;
+}
+
+.another-sp img {
+   width: 350px;
+   height: 480px;
+   border-radius: 12px;
+   margin: 0px 50px;
+}
+
+.abt-main h2 {
+   color: rgb(41, 166, 16);
+   margin-left: 40px;
+   margin-top: 20px;
+   font-size: 25px;
+}
+
+.tabs-container {
+   font-family: sans-serif;
+   color: #ffffff;
+}
+
+.tabs-nav {
+   display: flex;
+   gap: 20px;
+   margin-bottom: 15px;
+}
+
+.tab-btn {
+   background: none;
+   border: none;
+   color: #888888;
+   font-size: 1rem;
+   cursor: pointer;
+   padding: 0;
+   position: relative;
+   transition: color 0.3s;
+}
+
+.tab-btn:hover {
+   color: #ffffff;
+}
+
+.tab-btn.active {
+   color: #ffffff;
+}
+
+.tab-btn.active::after {
+   content: '';
+   position: absolute;
+   bottom: -5px;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background-color: #ff4d4d;
+}
+
+.tab-content {
+   display: none;
+}
+
+.tab-content.active {
+   display: block;
+}
+
+.date {
+   color: #ff4d4d;
+   font-size: 0.85rem;
+}
+
+.projects-head h1 {
+   text-align: center;
+   color: rgb(17, 125, 79);
+   font-size: 3pc;
+}
+
+.projects-head p {
+   color: antiquewhite;
+   font-size: 24px;
+   text-align: center;
+   margin: 50px;
+}
+
+.project-card {
+   position: relative;
+   width: 400px;
+   height: 500px;
+   overflow: hidden;
+   border-radius: 12px;
+   cursor: pointer;
+}
+
+.project-card img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+}
+
+.project-overlay {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(to top,
+         rgba(255, 0, 60, 0.95),
+         rgba(255, 0, 60, 0.05));
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: white;
+   padding: 20px;
+   box-sizing: border-box;
+
+   transform: translateY(100%);
+   transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-overlay {
+   transform: translateY(0);
+}
+
+.project-overlay h3 {
+   margin-bottom: 10px;
+   color: blue;
+   font-size: 25px;
+}
+
+.project-overlay p {
+   font-size: 15px;
+   line-height: 1.5;
+}
+
+.project-overlay a button {
+   padding: 10px;
+   background: blueviolet;
+   color: white;
+   border: none;
+   outline: none;
+   font-size: 14px;
+   border-radius: 25px;
+   text-decoration: none;
+}
+
+.many-cards {
+   display: flex;
+   justify-content: center;
+   gap: 160px;
+}
+
+.single-card {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.just {
+   text-align: center;
+   color: orange;
+   font-size: 40px;
+}
+
+.cont-main {
+   display: flex;
+   justify-content: center;
+   gap: 80px;
+   margin: 20px;
+}
+
+.cont-main .cont-mine p {
+   color: whitesmoke;
+   font-size: 18px;
+   margin: 15px;
+}
+
+.cont-main .cont-mine h2 {
+   color: rgb(217, 59, 59);
+   text-align: center;
+   margin: 20px;
+}
+
+.cont-main .cont-mine {
+   display: flex;
+   flex-direction: column;
+}
+
+.cont-main .cont-mine a {
+   font-size: 18px;
+   color: wheat;
+   text-decoration: none;
+   line-height: 1.5px;
+}
+
+.cont-main .cont-mine a i {
+   font-size: 30px;
+   color: #ff4d4d;
+   margin: 10px;
+}
+
+.cont-main .cont-mine a strong {
+   color: blue;
+   margin: 5px;
+}
+
+.cont-main .cont-mine form {
+   margin: 30px;
+   padding: 20px;
+}
+
+.cont-main .cont-mine form input {
+   width: 500px;
+   height: 35px;
+   padding: 15px;
+   font-size: 16px;
+   border: none;
+   outline: none;
+   border-radius: 20px;
+   color: black;
+}
+
+.cont-main .cont-mine form textarea {
+   width: 500px;
+   height: 200px;
+   border: none;
+   outline: none;
+   padding: 15px;
+   border-radius: 12px;
+}
+
+.cont-main .cont-mine form h5 {
+   color: blue;
+   margin: 10px;
+}
+
+.cont-main .cont-mine form button {
+   padding: 10px;
+   font-size: 18px;
+   color: #ffffff;
+   background: orange;
+   border: none;
+   outline: none;
+   border-radius: 15px;
+   margin: 15px;
+}
+
+.footer {
+   background: #0B1220;
+   color: #E2E8F0;
+   text-align: center;
+   padding: 40px 20px;
+}
+
+.footer h3 {
+   color: #38BDF8;
+   font-size: 30px;
+}
+
+.footer-links a {
+   color: #CBD5E1;
+   text-decoration: none;
+   margin: 10px;
+}
+
+.footer-links a:hover {
+   color: #38BDF8;
+}
+
+.copyright {
+   border-top: 1px solid #334155;
+   padding-top: 20px;
+   margin-top: 25px;
+   font-size: 14px;
+}
+
+
+/* =========================================================
+   HAMBURGER MENU + RESPONSIVE STYLES (ADDED, NOT CHANGING
+   ANY OF THE ORIGINAL RULES ABOVE)
+   ========================================================= */
+
+/* --- Hamburger button (hidden on desktop) --- */
+.hamburger {
+   display: none;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 25px;
+   height: 30px;
+   background: transparent;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 0;
+   z-index: 1001;
+   align-self: center;
+}
+
+.hamburger span {
+   display: block;
+   height: 4px;
+   width: 100%;
+   background: orange;
+   border-radius: 4px;
+   transition: all 0.3s ease;
+}
+
+/* --- Animate hamburger into X when active --- */
+.hamburger.active span:nth-child(1) {
+   transform: translateY(13px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+   opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+   transform: translateY(-13px) rotate(-45deg);
+}
+
+/* --- Global image safety --- */
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+/* =========================================================
+   TABLET & MOBILE (≤ 768px)
+   ========================================================= */
+@media screen and (max-width: 768px) {
+
+   /* --- NAV: turn into hamburger menu --- */
+   .nav-container {
+      position: relative;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 15px 20px;
+   }
+
+   /* Hamburger visible */
+   .hamburger {
+      display: flex;
+      order: 2;
+      margin-left: auto;
+   }
+
+   /* Logo first */
+   .logo {
+      order: 1;
+   }
+
+   /* Nav-links becomes a dropdown below */
+   .nav-container .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      order: 3;
+      background: #020231;
+      border-top: 2px solid #ff4d4d;
+      padding: 15px 0;
+      margin-top: 12px;
+      position: relative;
+      z-index: 1000;
+   }
+
+   .nav-container .nav-links.active {
+      display: flex;
+   }
+
+   .nav-container .nav-links a {
+      margin: 10px 0;
+      font-size: 22px;
+      text-align: center;
+      display: block;
+      width: 100%;
+   }
+
+   /* --- HOME SECTION --- */
+   .home-top {
+      margin: 20px 15px;
+   }
+
+   .home-top h1 {
+      font-size: 34px;
+   }
+
+   .home-top h3 {
+      font-size: 24px;
+   }
+
+   .home-middle {
+      flex-direction: column;
+      align-items: center;
+      margin: 15px;
+      padding: 10px;
+   }
+
+   .home-middle img {
+      width: 90%;
+      max-width: 330px;
+      height: auto;
+      margin: 15px 0;
+   }
+
+   .home-middle p {
+      margin-right: 0;
+      font-size: 20px;
+      text-align: center;
+   }
+
+   /* --- BUTTONS --- */
+   .special .btns {
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   .special .btns a button {
+      margin: 15px 10px;
+      padding: 12px 18px;
+      font-size: 16px;
+   }
+
+   /* --- ABOUT SECTION --- */
+   .abt-cont h1 {
+      font-size: 36px;
+   }
+
+   .another-sp {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .another-sp img {
+      width: 90%;
+      max-width: 350px;
+      height: auto;
+      margin: 15px 0;
+   }
+
+   .abt-main p {
+      margin-right: 0;
+      font-size: 20px;
+      text-align: center;
+   }
+
+   .abt-main h2 {
+      margin-left: 0;
+      text-align: center;
+   }
+
+   /* --- PROJECTS --- */
+   .projects-head h1 {
+      font-size: 2.2rem;
+   }
+
+   .projects-head p {
+      font-size: 18px;
+      margin: 20px;
+   }
+
+   .many-cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 0 15px;
+   }
+
+   .project-card {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      aspect-ratio: 4 / 5;
+   }
+
+   /* --- CONTACT --- */
+   .just {
+      font-size: 32px;
+   }
+
+   .cont-main {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 15px;
+   }
+
+   .cont-main .cont-mine {
+      width: 100%;
+      align-items: center;
+   }
+
+   .cont-main .cont-mine form {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+   }
+
+   .cont-main .cont-mine form input,
+   .cont-main .cont-mine form textarea {
+      width: 100%;
+      max-width: 100%;
+   }
+
+   /* --- TABS --- */
+   .tabs-nav {
+      flex-wrap: wrap;
+      gap: 12px;
+   }
+}
+
+/* =========================================================
+   SMALL PHONES (≤ 480px)
+   ========================================================= */
+@media screen and (max-width: 480px) {
+   .home-top h1 {
+      font-size: 26px;
+   }
+
+   .home-top h3 {
+      font-size: 18px;
+   }
+
+   .nav-container .nav-links a {
+      font-size: 18px;
+   }
+
+   .special .btns a button {
+      font-size: 14px;
+      padding: 10px 14px;
+   }
+
+   .abt-cont h1 {
+      font-size: 30px;
+   }
+
+   .footer h3 {
+      font-size: 24px;
+   }
+
+   .footer-links a {
+      display: inline-block;
+      margin: 6px 8px;
+   }
+}
