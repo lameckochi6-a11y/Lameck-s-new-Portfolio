@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Lameck Ochieng/Software Engineer</title>
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
 </head>
+
 <body>
+   <section id="home">
    <div class="nav-container">
       <div class="logo">
          <img src="images/WhatsApp Image 2026-10-08 at 20.27.46(1).jpeg" alt="logo">
          <h2>Lameck</h2>
       </div>
-   
+
       <!-- Hamburger button (visible on mobile only) -->
       <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
          <span></span>
          <span></span>
          <span></span>
       </button>
-   
+
       <!-- Your existing nav links (add id="navLinks") -->
       <div class="nav-links" id="navLinks">
-         <a href="index.html">Home</a>
-         <a href="about.html">About</a>
-         <a href="projects.html">Projects</a>
-         <a href="contact.html">Contact</a>
+         <a href="#home">Home</a>
+         <a href="#about">About</a>
+         <a href="#projects">Projects</a>
+         <a href="#contact">Contact</a>
       </div>
    </div>
    <div class="home-top">
@@ -33,17 +37,156 @@
       <h3>Aspiring Web developer & Software Engineer</h3>
    </div>
    <div class="home-middle">
-     <div class="special">
-     <p>I'm <strong>Lameck Ochieng</strong>, an  <strong>aspiring Software Engineer</strong> and IT student at Karatina University, passionate about building innovative digital solutions through code, creativity and technology</p>
+      <div class="special">
+         <p>I'm <strong>Lameck Ochieng</strong>, an <strong>aspiring Software Engineer</strong> and IT student at
+            Karatina University, passionate about building innovative digital solutions through code, creativity and
+            technology</p>
          <div class="btns">
-            <a href="projects.html"><button>View my Work</button></a>
-           <a href="https://wa.me/254764959436" target="_blank"><button class="wasp">Contact Me</button></a>
+            <a href="#projects"><button>View my Work</button></a>
+            <a href="https://wa.me/254764959436" target="_blank"><button class="wasp">Contact Me</button></a>
 
          </div>
 
-     </div>
-     <img src="images/WhatsApp Image 2026-10-08 at 20.27.44(1).jpeg" alt="my image">
+      </div>
+      <img src="images/WhatsApp Image 2026-10-08 at 20.27.44(1).jpeg" alt="my image">
    </div>
+   </section>
+
+   /*ABOUT SECTION*/
+
+<section id="about">
+      <div class="abt-cont">
+         <h1>About Me</h1>
+      </div>
+      <div class="abt-main">
+         <h2>Who I Am</h2>
+         <div class="another-sp">
+            <p>Hello, I,m <strong>Lameck Ochieng</strong>, an Information Technology student at Karatina University with a
+               strong passion for Software Engineering and Web Development. I specalise in creating modern, responsive and
+               user-friendly
+               digital expriences, combining creativity and technical skills to develop innovative solutions to real-world
+               problems. I'm continuously expanding my knowledge and refining my skills to build impactfull technology
+               solutions</p>
+            <img src="images/WhatsApp Image 2026-10-08 at 20.27.43.jpeg" alt="Another pictue">
+         </div>
+         <div class="tabs-container">
+            <!-- Tab Navigation -->
+            <div class="tabs-nav">
+               <button class="tab-btn" data-target="skills">Skills</button>
+               <button class="tab-btn active" data-target="education">Education</button>
+            </div>
+   
+            <!-- Tab Contents -->
+            <div class="tab-contents">
+               <!-- Skills Content (Hidden by default) -->
+               <div id="skills" class="tab-content">
+                  <p><span class="date">Frontend Development</span><br> HTML <br>CSS <br> JavaScript</p>
+                  <p><span class="date">Programming</span><br>C Programming</p>
+                  <p><span class="date">Database Management</span><br>SQL</p>
+                  <p><span class="date">Development Tools</span><br>Git <br> GitHub <br> Visual Studio Code <br> Linux</p>
+               </div>
+               <div id="education" class="tab-content active">
+                  <p><span class="date">2025</span><br>Joined Karatina University School of computing and informatics in IT
+                     program</p>
+                  <p><span class="date">2024</span><br>Completed my Highschool and started online course on Web Development
+                     and
+                     Programming fundamentals</p>
+                  <p><span class="date">2021</span><br>Joined Gideons Highschool</p>
+               </div>
+            </div>
+         </div>
+      </div>
+</section>
+
+/*PROJECTS SECTION*/
+
+<section id="projects">
+      <div class="projects-head">
+         <h1>My Projects</h1>
+         <p>Welcome to my project portfolio, where I showcase my techical skills, creatvity and continuous growth in Software
+            Development. Each projects reflects my commitment to building practical, responsive and user -friendly digital
+            solutions</p>
+         <div class="many-cards">
+            <div class="single-card">
+               <div class="project-card">
+                  <img src="images/fashion-hub.jpeg" alt="Calculator App">
+      
+                  <div class="project-overlay">
+                     <h3>FashionHub</h3>
+                     <p>An online platform for purchasing clothes</p>
+                     <a href="https://lameckochi6-a11y.github.io/E-commerce/"><button>View Projec↗</button></a>
+                  </div>
+               </div>
+               <p><strong>Technologies:</strong>HTML, CSS & JavaScript</p>
+            </div>
+            <div class="single-card">
+               <div class="project-card">
+                  <img src="images/password-strength.jpeg" alt="Calculator App">
+      
+                  <div class="project-overlay">
+                     <h3>Password-Strength</h3>
+                     <p>This app enables users to check the strength of passwords.</p>
+                     <a href="https://lameckochi6-a11y.github.io/Password-Strength/"><button>View Project ↗</button></a>
+                  </div>
+               </div>
+               <p><strong>Technologies:</strong>HTML, CSS & JavaScript</p>
+            </div>
+      
+      
+         </div>
+      </div>
+</section>
+
+/*CONTACT SECTION*/
+
+<section id="contact">
+<h1 class="just">Contact Me</h1>
+<div class="cont-main">
+   <div class="cont-mine">
+      <h2>Get In Touch</h2>
+      <p>Have a project in mind, a business inquiry or an opportunity to collaaaborate? I'd love to hear from you. Feel
+         free to reach out, and let's turn your ideas into reality.</p>
+      <a href="lameckochi6@gmail.com"><i
+            class="fa-solid fa-envelope"></i><strong>Email:</strong>lameckochi6@gmail.com</a>
+      <a href="https://wa.me/254764959436"><i
+            class="fa-brands fa-whatsapp"></i><strong>WhatsApp:</strong>+25476495559436</a>
+      <a href="https://github.com/lameckochi6-a11y"><i
+            class="fa-brands fa-github"></i><strong>GitHub:</strong>lameckochi6-a11y</a>
+      <a href="https://www.facebook.com/profile.php?id=61579743506713"><i
+            class="fa-brands fa-facebook"></i><strong>Facebook</strong>Lameck Ocheng</a>
+      <a href="https://youtube.com/@code-lameck?si=KsOGFZxjEZEoBIGC"><i
+            class="fa-brands fa-youtube"></i><strong>Youtube:</strong>Web dev Lameck</a>
+      <p>I'm open to new opportunities, collaborations and exciting projects in Technology and Web development.</p>
+   </div>
+   <div class="cont-mine">
+      <form action="https://formspree.io/f/xrpekzgg" method="post">
+         <h5>Your Name:</h5>
+         <input type="text" name="name" placeholder=" Enter your full name" required>
+         <h5>Your Email:</h5>
+         <input type="email" name="email" placeholder=" Enter your email" required>
+         <h5>Your Message:</h5>
+         <textarea name="message" placeholder="Write your message..." required></textarea>
+         <button type="submit">Send message</button>
+      </form>
+   </div>
+</div>
+<footer class="footer">
+   <h3>LAMECK OCHIENG</h3>
+   <p>Aspiring Software Engineer</p>
+
+   <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+   </div>
+
+   <p class="copyright">
+      &copy; 2026 Lameck Ochieng. All Rights Reserved.
+   </p>
+</footer>
+</section>
    <script src="script.js"></script>
 </body>
+
 </html>
